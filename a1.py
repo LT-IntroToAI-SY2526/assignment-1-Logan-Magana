@@ -41,7 +41,7 @@ Make them progressively more challenging. Make sure each problem has clear instr
 # =============================================================================
 
 """
-Write a program that asks the user for their name, age, and favorite color, then displays this information in a formatted message.
+1.Write a program that asks the user for their name, age, and favorite color, then displays this information in a formatted message.
 Instructions:
 
 Use input() to get user information
@@ -56,7 +56,27 @@ What's your favorite color? blue
 
 Hi Alex! You are 15 years old and your favorite color is blue.
 
-2.
+2.Create a program that takes a numerical grade and converts it to a letter grade.
+Instructions:
+
+Ask the user for their numerical grade (0-100)
+Use if/elif/else to determine the letter grade:
+
+90-100: A
+80-89: B
+70-79: C
+60-69: D
+Below 60: F
+
+
+Display both the numerical and letter grade
+
+Example Input/Output:
+Enter your grade: 87
+Your grade of 87 is a B.
+
+Enter your grade: 92
+Your grade of 92 is an A.
 
 """
 
@@ -94,8 +114,9 @@ color= input("what's your Favorite color? ")
 print("Hi",name,"! According to your inputs, you are",age,"and your favorite color is",color)
 
 print("\nTesting Problem 2:")
-
-
+grade= input("What's your grade?")
+if grade<89:
+    print("A") 
 print("\nTesting Problem 3:")
 # Add your tests here
 
