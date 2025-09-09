@@ -78,6 +78,25 @@ Your grade of 87 is a B.
 Enter your grade: 92
 Your grade of 92 is an A.
 
+3.Write a program that counts down from a given number to zero, but skips multiples of 3.
+Instructions:
+
+Ask the user for a starting number
+Use a while loop to count down to 0
+Skip numbers that are divisible by 3 (use the % operator)
+Print "Blast off!" when you reach 0
+
+Example Input/Output:
+Enter starting number: 10
+10
+8
+7
+5
+4
+2
+1
+Blast off!
+
 """
 
 
@@ -106,7 +125,7 @@ print(f"is_even(4): {is_even(4)}")  # Should print True
 print(f"is_even(7): {is_even(7)}")  # Should print False
 """
 
-print("Testing Problem 1:")
+print("\nTesting Problem 1:")
     
 name= input("what's your name? ")
 age= int(input("what's your age? "))
@@ -114,11 +133,24 @@ color= input("what's your Favorite color? ")
 print("Hi",name,"! According to your inputs, you are",age,"and your favorite color is",color)
 
 print("\nTesting Problem 2:")
-grade= input("What's your grade?")
-if grade<89:
-    print("A") 
+grade= input("What's your grade? ")
+grade=int(grade)
+if grade>=90:
+    print("A")
+elif grade>=80:
+    print("B")
+elif grade>=70:
+    print("C")
+elif grade>=60:
+    print("Study!!")
+elif grade>=50:
+    print("Study!!")  
 print("\nTesting Problem 3:")
-# Add your tests here
+
+chal= int(input("Pick a number "))
+while chal>0:
+    if chal % 3!=0:
+        print(chal)
 
 print("\nTesting Problem 4:")
 # Add your tests here
