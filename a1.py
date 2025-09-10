@@ -151,6 +151,7 @@ chal= int(input("Pick a number "))
 while chal>0:
     if chal % 3!=0:
         print(chal)
+    chal=chal-1
 
 print("\nTesting Problem 4:")
 # Add your tests here
