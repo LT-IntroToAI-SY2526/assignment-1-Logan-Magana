@@ -102,7 +102,7 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    return sum_list(lst) / len(lst) if lst else 0
 
 
 def median(lst: List[int]) -> float:
@@ -117,7 +117,7 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    return (lst[len(lst) // 2] + lst[len(lst) // 2 - 1]) / 2 if len(lst) % 2 == 0 else lst[len(lst) // 2]
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -139,7 +139,22 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    pos=0
+    current="duck1"
+    while len(lst)>2:
+        if current=="duck1":
+            current=="duck2"
+            pos+=1
+        elif current=="duck2":
+            current="goose"
+        else:
+            current="duck1"
+            lst.pop(pos)
+        
+        if pos==len(lst):
+            pos=0
+    return lst
+
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
@@ -153,9 +168,13 @@ if __name__ == "__main__":
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert sum_list([54, 23, 17,9]) == 103, "sum_list of [54, 23, 17,9] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
+    assert mean([1, 2, 3, 4, 5,6]) == 21/6, "mean of [1,2,3,4,5,6] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
+    assert median([1, 2, 3, 4, 5,6]) == 3.5, "median of [1,2,3,4,5,6] failed"
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
-    assert duck_duck_goose(names) == ["roscoe", "law"]
+    assert duck_duck_goose(names) == ["roscoe", "law"],"failed duck 1"
+    names = ["Miguel","Emma","Franco","Lucas","Maks"]
+    assert duck_duck_goose(names) == ["Emma","Lucas"],"failed duck 2"
 
     print("All tests passed!")

@@ -97,6 +97,41 @@ Enter starting number: 10
 1
 Blast off!
 
+4. Create a simple shopping list program that lets users add items and display their list.
+Instructions:
+
+Start with an empty list
+Ask the user how many items they want to add
+Use a for loop to collect each item and add it to the list
+Display the complete shopping list with numbers
+
+Example Input/Output:
+How many items do you want to add? 3
+Enter item 1: apples
+Enter item 2: bread
+Enter item 3: milk
+
+Your Shopping List:
+1. apples
+2. bread
+3. milk
+
+5.Write a function that analyzes a number and returns information about it.
+Instructions:
+
+Create a function called analyze_number(num) that takes one parameter
+The function should return a string describing the number:
+
+Whether it's positive, negative, or zero
+Whether it's even or odd (only if it's not zero)
+
+
+Call the function with different test numbers
+
+Example Input/Output:
+analyze_number(7) → "7 is positive and odd"
+analyze_number(-4) → "-4 is negative and even"
+analyze_number(0) → "0 is zero"
 """
 
 
@@ -152,11 +187,23 @@ while chal>0:
     if chal % 3!=0:
         print(chal)
     chal=chal-1
+print("Blast off!")
 
 print("\nTesting Problem 4:")
-# Add your tests here
-
+items= int(input("How many stuff do you want on your grocery list? "))
+groc=[]
+for food in range(items):
+    food= input("Add your items: ")
+    groc.append(food)
+print(groc)
 print("\nTesting Problem 5:")
-# Add your tests here
 
-
+def analyze_number(num):
+    if num%2== 1:
+        print("This number is odd Mr.Frog  ")
+    elif num%2 == 0:
+        print(" This number is even stephen.")
+    else:
+        print("this number is a zero hero")
+num=input("Pick another number for me :)")
+analyze_number(num)
