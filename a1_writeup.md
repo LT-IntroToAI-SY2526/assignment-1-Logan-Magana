@@ -17,9 +17,14 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 After completing your problems, reflect on:
 
 1. **What was your initial experience with Python?** How did it compare to other programming languages you've used?
+My initial experience with python went alright. Although I have only really used httml a it in ESC, I didn't have much experience with coding even if I looked at some pratice problems before this assignment. But I still had fun :)
 
 2. **How did you use AI effectively?** Give specific examples of good prompts you used and what you learned from the responses.
+I used AI to help me identify concepts I was not familiar with so that I can know it's function and placement in code. Example: This is what i have for #4 but I need help on how to separate the groceries, can you help without telling me the answer? items= int(input("How many stuff do you want on your grocery list? "))
+for groc in range(items):
+    groc= input("Add your items ")
 
 3. **What concepts were most challenging?** How did AI help you understand them?
-
+To me, the most challenging part was the lists because I had trouble coding them to interact with the rest of my code. Ai was able to help explain the logic and functions related to lists that helped me narrow down to my final product.
 4. **What did you learn about collaborating with AI?** What strategies worked best for learning rather than just getting answers?
+Sometimes they aren't specific enough in what they are telling you and can be wrong sometimes (like how it wanted me to only return but not print for the final problem). The strategy that best worked for me was to ask further questions so that it could explain functions or concepts more in depth (That I could still understand)

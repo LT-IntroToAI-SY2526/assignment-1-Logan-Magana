@@ -202,8 +202,13 @@ def analyze_number(num):
     if num%2== 1:
         print("This number is odd Mr.Frog  ")
     elif num%2 == 0:
-        print(" This number is even stephen.")
+        print(" This number is even stephen ")
     else:
-        print("this number is a zero hero")
-num=input("Pick another number for me :)")
+        print("this number is a zero hero ")
+    if num>=0:
+        print("and this number is positive")
+    else:
+        print("and this number is negative")
+num=input("Pick another number for me :) ")
+num=int(num)
 analyze_number(num)
